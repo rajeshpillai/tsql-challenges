@@ -107,7 +107,7 @@ ORDER BY
 	e.Salary
 	
 	
--- Solution 5	
+-- Solution 5	(This is incorrect)
 SELECT * FROM @Employees e1
 	WHERE 2 <= (SELECT COUNT(DISTINCT Salary) FROM @Employees e2 
 				    WHERE e1.Salary <= e2.Salary AND e1.Department = e2.Department)
